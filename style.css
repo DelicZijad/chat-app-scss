@@ -1,0 +1,387 @@
+/*text*/
+/*gradient*/
+/*secondary*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: hsl(270deg, 20%, 96%);
+}
+@media (max-width: 420px) {
+  body {
+    height: auto;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  body {
+    height: auto;
+  }
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+.content {
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+@media (max-width: 420px) {
+  .content {
+    padding-block: 4rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .content {
+    padding-block: 4rem;
+  }
+}
+
+#dark {
+  position: absolute;
+  height: 85vh;
+  width: 30%;
+  background-image: linear-gradient(hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  top: 0;
+  left: 0;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+  transform: translateX(-16.66%);
+  z-index: -1;
+}
+@media (max-width: 420px) {
+  #dark {
+    height: 80vh;
+    width: 100%;
+    transform: translate(-50vw);
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  #dark {
+    height: 80vh;
+    width: 80%;
+    transform: translate(-40vw);
+  }
+}
+
+#light {
+  position: absolute;
+  height: 85vh;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.015);
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  transform: translateX(16.66%);
+  z-index: -1;
+}
+@media (max-width: 420px) {
+  #light {
+    display: none;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  #light {
+    display: none;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+@media (max-width: 420px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    width: 70%;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    width: 40%;
+  }
+}
+
+.phone {
+  height: 100%;
+  padding: 1rem;
+  border-radius: 30px;
+  transform: translateX(-25%);
+  background-color: white;
+  font-size: 10px;
+  color: white;
+  width: 25vw;
+  position: relative;
+}
+@media (max-width: 420px) {
+  .phone {
+    width: 100%;
+    transform: translate(0);
+    padding: 0.7rem;
+    font-size: 8px;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone {
+    width: 100%;
+    transform: translate(0);
+    padding: 0.7rem;
+    font-size: 8px;
+  }
+}
+.phone--white {
+  position: absolute;
+  height: 2.5rem;
+  width: 50%;
+  background-color: white;
+  align-self: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+@media (max-width: 420px) {
+  .phone--white {
+    height: 2rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone--white {
+    height: 2rem;
+  }
+}
+.phone--container {
+  background-color: hsl(270deg, 20%, 96%);
+  border-radius: 30px;
+}
+.phone--upper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-image: linear-gradient(to right, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+.phone--upper--name {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 420px) {
+  .phone--upper--name {
+    font-size: 12px;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone--upper--name {
+    font-size: 12px;
+  }
+}
+.phone--upper--status {
+  font-size: 10px;
+  color: hsl(276deg, 100%, 81%);
+  margin-top: 0.2rem;
+}
+@media (max-width: 420px) {
+  .phone--upper--status {
+    font-size: 8px;
+  }
+}
+.phone--upper--content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone--upper--left {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.phone--upper--img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.phone--images {
+  margin-block: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-self: right;
+}
+@media (max-width: 420px) {
+  .phone--images {
+    transform: scale(0.9);
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone--images {
+    transform: scale(0.9);
+  }
+}
+.phone--img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+@media (max-width: 420px) {
+  .phone--img {
+    transform: scale(0.9);
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone--img {
+    transform: scale(0.9);
+  }
+}
+.phone--chat {
+  display: grid;
+  justify-items: center;
+  padding: 0.5rem;
+}
+.phone--message--left {
+  color: hsl(276deg, 55%, 52%);
+  max-width: 70%;
+  background-color: hsl(206deg, 6%, 79%);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  justify-self: left;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.phone--message--right {
+  color: hsl(271deg, 15%, 43%);
+  max-width: 70%;
+  background-color: white;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  justify-self: right;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.phone--option {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(to right, hsl(293deg, 100%, 63%), hsl(264deg, 100%, 61%));
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 15px;
+  border-bottom-left-radius: 2px;
+  justify-self: left;
+}
+.phone--option--left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.phone--option--circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+@media (max-width: 420px) {
+  .phone--option--circle {
+    transform: scale(0.75);
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone--option--circle {
+    transform: scale(0.75);
+  }
+}
+.phone--option--price {
+  font-size: 13px;
+  font-weight: 700;
+}
+@media (max-width: 420px) {
+  .phone--option--price {
+    font-size: 11px;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .phone--option--price {
+    font-size: 11px;
+  }
+}
+.phone--type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: hsl(206deg, 6%, 79%);
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 30px;
+}
+.phone--type--arrow {
+  padding: 0.5rem;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.description {
+  display: grid;
+  gap: 1.5rem;
+  transform: translateX(25%);
+}
+@media (max-width: 420px) {
+  .description {
+    transform: translate(0);
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .description {
+    transform: translate(0);
+  }
+}
+.description--heading {
+  font-size: 2.5rem;
+  color: hsl(271deg, 15%, 43%);
+  font-weight: 700;
+}
+@media (max-width: 420px) {
+  .description--heading {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .description--heading {
+    font-size: 2rem;
+  }
+}
+.description--txt {
+  color: hsl(270deg, 7%, 64%);
+}
+@media (min-width: 450px) and (max-width: 900px) {
+  .description--txt {
+    font-size: 14px;
+  }
+}
